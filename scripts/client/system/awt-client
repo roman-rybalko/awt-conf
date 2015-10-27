@@ -1,0 +1,60 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:          awt-client
+# Required-Start:    $remote_fs $syslog $named $network $time
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: AWT Client
+# Description:       Advanced Web Testing Task execution Client
+### END INIT INFO
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+. /lib/lsb/init-functions
+
+case "$1" in
+	start)
+		log_daemon_msg "Starting AWT Clients"
+		for s in /home/*/.awt-client; do
+			[ -e "$s" ] || continue
+			home="`dirname "$s"`"
+			user="`basename "$home"`"
+			log_progress_msg "$user"
+			su -l -c "$home/start.sh" "$user" &
+		done
+		wait
+		log_end_msg 0
+	;;
+	stop)
+		log_daemon_msg "Stopping AWT Clients"
+		for s in /home/*/.awt-client; do
+			[ -e "$s" ] || continue
+			home="`dirname "$s"`"
+			user="`basename "$home"`"
+			log_progress_msg "$user"
+			su -l -c "$home/stop.sh" "$user" &
+		done
+		wait
+		log_end_msg 0
+	;;
+	force-reload|restart)
+		$0 stop
+		$0 start
+	;;
+	status)
+		for s in /home/*/.awt-client; do
+			[ -e "$s" ] || continue
+			home="`dirname "$s"`"
+			user="`basename "$home"`"
+			su -l -c "$home/status.sh" "$user" &
+		done
+	;;
+	*)
+		echo "Usage: /etc/init.d/atd {start|stop|restart|force-reload|status}"
+		exit 1
+	;;
+esac
+
+exit 0
