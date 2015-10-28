@@ -9,17 +9,18 @@ class Config {
 	const RESULTS_PATH = 'ui/results/';
 	const MAIL_HOST = 'smtp.yandex.ru';
 	const MAIL_PORT = 587;
-	const MAIL_USER = 'test@advancedwebtesting.com';
-	const MAIL_PASSWORD = 'test12';
+	const MAIL_USER = 'report@advancedwebtesting.com';
+	const MAIL_PASSWORD = 'XvkyGirv3DF5';
 	const MAIL_SENDER_NAME = 'Advanced Web Testing';
-	const MAIL_SENDER_EMAIL = 'test@advancedwebtesting.com';
+	const MAIL_SENDER_EMAIL = 'report@advancedwebtesting.com';
 	const MAIL_TEMPLATE_PATH = 'mail/';
 	const UI_URL = 'https://advancedwebtesting.com/ui/';
 	const UI_PATH = 'ui/';
-	const REGISTRATION_TOP_UP = 100;
-	const DEMO_PASSWORD = 'Vhh1GCBahBDeaWBDJE2Ll8b29azv4x2UP33BsQT9US';
+	const SIGNUP_BONUS = 200;
+	const PAYPAL_USER = 'paypal_api1.advancedwebtesting.com';
+	const PAYPAL_PASSWORD = 'NXN3A2C2DDFU9M4V';
+	const PAYPAL_SIGNATURE = 'AN4Wox6XAN2kmJLCRapsav7rwlB6Agsvbs67aQHco9tp3MSBDvf-9LJI';
+	const PAYPAL_SANDBOX = false;
 }
 
 \Config::$rootPath = __DIR__ . '/';
-
-?>
