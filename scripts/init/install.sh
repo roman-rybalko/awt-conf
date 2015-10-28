@@ -13,6 +13,7 @@ fi
 
 if ! grep swap /etc/fstab; then
 	[ -e /swap ] || dd if=/dev/zero of=/swap bs=1M count=4096
+	chmod 0600 /swap
 	mkswap /swap
 	cat fstab >> /etc/fstab
 fi
