@@ -1,0 +1,20 @@
+commit 12f50a83ceea4ec7f5cb7cf89514a9f72bd71d80
+Author: Roman Rybalko <devel@romanr.info>
+Date:   Fri Oct 30 11:16:24 2015 +0300
+
+    restart tasks, task timeout, action limit, sched fail messages
+
+diff --git a/server/config.sample.php b/server/config.sample.php
+index bb0933f..b080390 100644
+--- a/server/config.sample.php
++++ b/server/config.sample.php
+@@ -21,6 +21,9 @@ class Config {
+ 	const PAYPAL_PASSWORD = 'XXXX';
+ 	const PAYPAL_SIGNATURE = 'XXXXX';
+ 	const PAYPAL_SANDBOX = true;
++	const TASK_TIMEOUT = 600;  // seconds
++	const TASK_ACTION_TIMEOUT = 10;  // seconds
++	const TEST_MAX_ACTIONS_CNT = 60;
+ }
+ 
+ \Config::$rootPath = __DIR__ . '/';
