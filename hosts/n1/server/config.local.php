@@ -24,6 +24,8 @@ class Config {
 	const TASK_TIMEOUT = 600;  // seconds
 	const TASK_ACTION_TIMEOUT = 10;  // seconds
 	const TEST_MAX_ACTIONS_CNT = 42;
+	const PURGE_PERIOD = 42;  // days
+	const BILLING_PURGE_PERIOD = 732;  // days
 }
 
 \Config::$rootPath = __DIR__ . '/';

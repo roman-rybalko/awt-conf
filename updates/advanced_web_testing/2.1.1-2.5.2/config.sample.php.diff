@@ -1,0 +1,19 @@
+commit b91252ac075a545b2154736eba3ed47c768a6977
+Author: Roman Rybalko <devel@romanr.info>
+Date:   Wed Nov 4 17:12:39 2015 +0300
+
+    fancy graphs for new account
+
+diff --git a/server/config.sample.php b/server/config.sample.php
+index b080390..65f98f0 100644
+--- a/server/config.sample.php
++++ b/server/config.sample.php
+@@ -24,6 +24,8 @@ class Config {
+ 	const TASK_TIMEOUT = 600;  // seconds
+ 	const TASK_ACTION_TIMEOUT = 10;  // seconds
+ 	const TEST_MAX_ACTIONS_CNT = 60;
++	const PURGE_PERIOD = 42;  // days
++	const BILLING_PURGE_PERIOD = 732;  // days
+ }
+ 
+ \Config::$rootPath = __DIR__ . '/';
