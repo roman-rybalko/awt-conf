@@ -51,14 +51,6 @@ if ! id roma; then
 	chmod 0700 /home/roma
 fi
 
-if ! id client1; then
-	for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32; do
-		useradd -m -U client$i
-		chfn --full-name "AWT Client #$i on `hostname -s`" client$i
-	done
-	chmod 0700 /home/client*
-fi
-
 apt-get --yes install npm nodejs-legacy
 apt-get --yes install xvfb dwm scrot openjdk-7-jre x11vnc
 

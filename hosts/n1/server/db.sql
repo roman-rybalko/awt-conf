@@ -7,7 +7,6 @@ create index tasks_idx2 on tasks(user_id);
 create table task_actions(task_id integer not null, type varchar(256) not null, selector varchar(256), data varchar(256), action_id integer not null, scrn varchar(256), failed varchar(256));
 create unique index task_actions_idx on task_actions(task_id, action_id);
 create table task_types(type_id integer primary key auto_increment not null, name varchar(256) not null, parent_type_id integer);
-create unique index task_types_idx on task_types(name(32));
 create table settings(user_id integer primary key not null, email varchar(256), task_fail_email_report integer(1), task_success_email_report integer(1), undeletable integer(1));
 create table stats(user_id integer not null, time integer not null, tasks_finished integer not null default 0, tasks_failed integer not null default 0, task_actions_executed integer not null default 0);
 create unique index stats_idx on stats(user_id, time);

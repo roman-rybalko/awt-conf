@@ -1,3 +1,5 @@
+delete from `task_types`;
+
 INSERT INTO `task_types` (`type_id`, `name`, `parent_type_id`) VALUES(1, 'any', NULL);
 
 INSERT INTO `task_types` (`type_id`, `name`, `parent_type_id`) VALUES(11, 'mobile', 1);

@@ -1,21 +1,36 @@
+"use strict";
 
 var spawncb = require('./lib/spawncb');
+//var scrn = require('./lib/scrot').get_scrn;
+var scrn = require('./lib/selutil').get_scrn;
 
 module.exports = {
 	server_url: 'https://advancedwebtesting.com/si/task.php',
 	server_token: 'iuB7lPg9Q3jSc9B95BFKRnkWkixmV3I1qQIuenRhsR',
-	task_type: 'ff_1920x1080',
+	task_type: 'phantomjs',
 	node_id: 'n2-c3',
-	selenium_browser: 'firefox',
-	selenium_server: 'http://localhost:4413/wd/hub',
-	selenium_port: 4413,
-	selenium_timeout: 30000,  // msec
+	//selenium_start_cb: spawncb('printf', ['selenium_start_cb called\n']),  /// fn(task) | null
+	//selenium_finish_cb: spawncb('true'),  /// fn(task, fails, scrns) | null
+	//selenium_finish_cb: spawncb('printf', ['selenium_finish_cb called\n']),  /// fn(task, fails, scrns) | null
+	selenium_capabilities: {'phantomjs.cli.args': ['--webdriver-logfile=../selenium.log']},  /// {name: value} | null
+	//selenium_browser: 'chrome',  /// string | null
+	//selenium_browser: 'firefox',  /// string | null
+	selenium_browser: 'phantomjs',  /// string | null
+	//selenium_browser: 'internet explorer',  /// string | null
+	//selenium_server: 'http://localhost:4413/wd/hub',  /// url | null
+	//selenium_server: 'http://localhost:5513/',  /// url | null
+	//selenium_port: 4413,  /// integer 1024-65535 | null
+	selenium_timeout: 10000,  /// msec
 	selenium_fullscreen: false,
-	batch_count: 1,  // a starving bug somewhere prevents efficient parallel run
-	batch_timeout: 5000,  // msec
+	selenium_scrn: scrn,  /// fn(selenium)
+	batch_count: 1,  /// a starving bug somewhere prevents efficient parallel run
+	batch_timeout: 5000,  /// msec
+	//batch_start_cb: spawncb('printf', ['batch_start_cb called\n']),  /// fn() | null
 	batch_start_cb: spawncb('../init.sh'),
+	//batch_finish_cb: spawncb('true'),  /// fn(err, val) | null
+	//batch_finish_cb: spawncb('printf', ['batch_finish_cb called\n']),  /// fn(err, val) | null
 	batch_finish_cb: spawncb('../cleanup.sh'),
-	xdisplay: 13,
-	xauth: "/tmp/xauth13",
-	xscrsize: "1920x1080x24"
+	//x_display: 13,  /// integer | null
+	//x_auth: "/tmp/xauth13",  /// integer | null
+	//x_scrsize: "1920x1080x24",  /// integer | null
 };
