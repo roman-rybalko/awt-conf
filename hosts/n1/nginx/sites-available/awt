@@ -5,23 +5,26 @@ server {
 	server_name advancedwebtesting.com;
 	root /var/www/awt;
 	index index.html index.php;
-	try_files $uri $uri/ =404;
 	location / {
+		try_files $uri $uri/ =404;
 		root /var/www/awt/lp;
 	}
 	location /ui/ {
+		try_files $uri $uri/ =404;
 		location ~ \.php$ {
 			include snippets/fastcgi-php.conf;
 			fastcgi_pass unix:/var/run/php5-fpm.sock;
 		}
 	}
 	location /si/ {
+		try_files $uri $uri/ =404;
 		location ~ \.php$ {
 			include snippets/fastcgi-php.conf;
 			fastcgi_pass unix:/var/run/php5-fpm-system.sock;
 		}
 	}
 	location /ai/ {
+		try_files $uri $uri/ =404;
 		location ~ \.php$ {
 			include snippets/fastcgi-php.conf;
 			fastcgi_pass unix:/var/run/php5-fpm-admin.sock;
