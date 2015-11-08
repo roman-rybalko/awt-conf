@@ -5,7 +5,7 @@ set -x
 
 rm -Rf ui-en
 tar -xf ui-en.tgz
-chmod -R a+rX,og-ws ui-en
+chmod -R a+rX,a-ws ui-en
 
 service nginx stop
 

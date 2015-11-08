@@ -5,7 +5,7 @@ set -x
 
 rm -Rf advanced_web_testing
 tar -xf advanced_web_testing.tgz
-chmod -R a+rX,og-ws advanced_web_testing
+chmod -R a+rX,a-ws advanced_web_testing
 
 service nginx stop
 
