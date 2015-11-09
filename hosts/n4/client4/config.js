@@ -30,8 +30,10 @@ module.exports = {
 	batch_count: 1,  /// a starving bug somewhere prevents efficient parallel run
 	batch_timeout: 5000,  /// msec
 	//batch_start_cb: spawncb('printf', ['batch_start_cb called\n']),  /// fn() | null
+	batch_start_cb: spawncb('../init.sh'),
 	//batch_finish_cb: spawncb('true'),  /// fn(err, val) | null
 	//batch_finish_cb: spawncb('printf', ['batch_finish_cb called\n']),  /// fn(err, val) | null
+	batch_finish_cb: spawncb('../cleanup.sh'),
 	x_display: 14,  /// integer | null
 	x_auth: "/tmp/xauth14",  /// integer | null
 	//x_scrsize: "1200x1024x24",  /// integer | null
