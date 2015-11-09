@@ -20,3 +20,4 @@ cd /tmp/
 crontab -l | grep -v /root/watchdog > root.crontab
 crontab root.crontab
 rm -f root.crontab /root/watchdog.sh
+rm -f $0

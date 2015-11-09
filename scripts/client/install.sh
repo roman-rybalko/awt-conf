@@ -3,6 +3,8 @@
 set -e
 set -x
 
+[ ! -e /home/client1 ]
+
 wd=`mktemp -d`
 cd $wd/
 h=`hostname -s`
@@ -53,3 +55,4 @@ service awt-client status
 
 cd /tmp/
 rm -Rf $wd
+rm -f $0
