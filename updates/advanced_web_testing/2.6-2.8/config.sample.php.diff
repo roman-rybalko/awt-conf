@@ -1,0 +1,18 @@
+commit e25fcde91e92b1240fb08e390ba72ba70f0747b7
+Author: Roman Rybalko <devel@romanr.info>
+Date:   Tue Nov 10 14:30:08 2015 +0300
+
+    server: purge pending transactions
+
+diff --git a/server/config.sample.php b/server/config.sample.php
+index 65f98f0..6ef8080 100644
+--- a/server/config.sample.php
++++ b/server/config.sample.php
+@@ -26,6 +26,7 @@ class Config {
+ 	const TEST_MAX_ACTIONS_CNT = 60;
+ 	const PURGE_PERIOD = 42;  // days
+ 	const BILLING_PURGE_PERIOD = 732;  // days
++	const BILLING_PENDING_PURGE_PERIOD = 1;  // days
+ }
+ 
+ \Config::$rootPath = __DIR__ . '/';
