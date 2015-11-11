@@ -8,7 +8,7 @@ set -x
 wd=`mktemp -d`
 cd $wd/
 h=`hostname -s`
-for n in home home-x home-p system $h; do
+for n in home home-x home-p client system $h; do
 	wget http://deploy/client/$n.tgz -O - | tar -xz
 done
 chown -R root:root .
@@ -25,6 +25,11 @@ chmod 0700 /home/client*
 cd $wd/home/
 for c in /home/client*; do
 	cp -a * $c/
+done
+
+cd $wd/
+for c in /home/client*; do
+	cp -a client $c/
 done
 
 cd $wd/$h/
