@@ -21,12 +21,20 @@ class Config {
 	const PAYPAL_PASSWORD = 'XXXX';
 	const PAYPAL_SIGNATURE = 'XXXXX';
 	const PAYPAL_SANDBOX = true;
-	const TASK_TIMEOUT = 600;  // seconds
-	const TASK_ACTION_TIMEOUT = 10;  // seconds
+	const WEBMONEY_ID = '000000000000';
+	const WEBMONEY_PURSE = 'R000000000000';
+	const WEBMONEY_CERT = '/xxx/xxxxxxxx.crt';
+	const WEBMONEY_CERT_KEY = '/xxx/xxxxxxxx.key';
+	const WEBMONEY_SECRET_KEY = 'XXXXXXXXXXXXXXXXXXXXXX';
+	const WEBMONEY_DAY_LIMIT = 0;
+	const WEBMONEY_WEEK_LIMIT = 0;
+	const WEBMONEY_MONTH_LIMIT = 0;
+	const TASK_TIMEOUT = 600; // seconds
+	const TASK_ACTION_TIMEOUT = 10; // seconds
 	const TEST_MAX_ACTIONS_CNT = 60;
-	const PURGE_PERIOD = 42;  // days
-	const BILLING_PURGE_PERIOD = 732;  // days
-	const BILLING_PENDING_PURGE_PERIOD = 1;  // days
+	const PURGE_PERIOD = 42; // days
+	const BILLING_PURGE_PERIOD = 732; // days
+	const BILLING_PENDING_PURGE_PERIOD = 1; // days
 }
 
 \Config::$rootPath = __DIR__ . '/';

@@ -21,6 +21,14 @@ class Config {
 	const PAYPAL_PASSWORD = 'NXN3A2C2DDFU9M4V';
 	const PAYPAL_SIGNATURE = 'AN4Wox6XAN2kmJLCRapsav7rwlB6Agsvbs67aQHco9tp3MSBDvf-9LJI';
 	const PAYPAL_SANDBOX = false;
+	const WEBMONEY_ID = '952332683666';
+	const WEBMONEY_PURSE = 'R264591009121';
+	const WEBMONEY_CERT = '/var/www/awt/webmoney-952332683666.crt';
+	const WEBMONEY_CERT_KEY = '/var/www/awt/webmoney-952332683666.key';
+	const WEBMONEY_SECRET_KEY = 'HXmxVVDTrdZtDuV3xbsqo9';
+	const WEBMONEY_DAY_LIMIT = 1000;
+	const WEBMONEY_WEEK_LIMIT = 7000;
+	const WEBMONEY_MONTH_LIMIT = 14000;
 	const TASK_TIMEOUT = 600;  // seconds
 	const TASK_ACTION_TIMEOUT = 10;  // seconds
 	const TEST_MAX_ACTIONS_CNT = 42;

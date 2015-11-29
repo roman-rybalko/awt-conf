@@ -1,0 +1,19 @@
+diff --git a/server/config.sample.php b/server/config.sample.php
+index 6ef8080..47eede8 100644
+--- a/server/config.sample.php
++++ b/server/config.sample.php
+@@ -21,6 +21,14 @@ class Config {
+ 	const PAYPAL_PASSWORD = 'XXXX';
+ 	const PAYPAL_SIGNATURE = 'XXXXX';
+ 	const PAYPAL_SANDBOX = true;
++	const WEBMONEY_ID = '000000000000';
++	const WEBMONEY_PURSE = 'R000000000000';
++	const WEBMONEY_CERT = '/xxx/xxxxxxxx.crt';
++	const WEBMONEY_CERT_KEY = '/xxx/xxxxxxxx.key';
++	const WEBMONEY_SECRET_KEY = 'XXXXXXXXXXXXXXXXXXXXXX';
++	const WEBMONEY_DAY_LIMIT = 0;
++	const WEBMONEY_WEEK_LIMIT = 0;
++	const WEBMONEY_MONTH_LIMIT = 0;
+ 	const TASK_TIMEOUT = 600;  // seconds
+ 	const TASK_ACTION_TIMEOUT = 10;  // seconds
+ 	const TEST_MAX_ACTIONS_CNT = 60;
