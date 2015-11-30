@@ -1,0 +1,77 @@
+--- squid.conf.orig	2015-11-29 19:24:57.901671910 -0500
++++ squid.conf	2015-11-29 20:26:50.961579848 -0500
+@@ -340,6 +340,7 @@
+ ##auth_param basic credentialsttl 2 hours
+ #Default:
+ # none
++auth_param basic program /usr/lib/squid3/ncsa_auth /etc/squid3/passwd
+ 
+ #  TAG: authenticate_cache_garbage_interval
+ #	The time period between garbage collection across the username cache.
+@@ -823,12 +824,13 @@
+ http_access deny !Safe_ports
+ 
+ # Deny CONNECT to other than secure SSL ports
+-http_access deny CONNECT !SSL_ports
++#http_access deny CONNECT !SSL_ports
++http_access deny CONNECT !Safe_ports
+ 
+ # We strongly recommend the following be uncommented to protect innocent
+ # web applications running on the proxy server who think the only
+ # one who can access services on "localhost" is a local user
+-#http_access deny to_localhost
++http_access deny to_localhost
+ 
+ #
+ # INSERT YOUR OWN RULE(S) HERE TO ALLOW ACCESS FROM YOUR CLIENTS
+@@ -840,6 +842,9 @@
+ #http_access allow localnet
+ http_access allow localhost
+ 
++acl authenticated proxy_auth REQUIRED
++http_access allow authenticated
++
+ # And finally deny all other access to this proxy
+ http_access deny all
+ 
+@@ -1133,7 +1138,7 @@
+ #
+ 
+ # Squid normally listens to port 3128
+-http_port 3128
++http_port 64312
+ 
+ #  TAG: https_port
+ # Note: This option is only available if Squid is rebuilt with the
+@@ -3333,6 +3338,7 @@
+ #	replies as required by RFC2616.
+ #Default:
+ # via on
++via off
+ 
+ #  TAG: ie_refresh	on|off
+ #	Microsoft Internet Explorer up until version 5.5 Service
+@@ -3683,6 +3689,7 @@
+ #	mail if the cache dies.  The default is "webmaster."
+ #Default:
+ # cache_mgr webmaster
++cache_mgr admin@advancedwebtesting.com
+ 
+ #  TAG: mail_from
+ #	From: email-address for mail sent when the cache dies.
+@@ -3742,6 +3749,7 @@
+ #	names with this setting.
+ #Default:
+ # visible_hostname localhost
++visible_hostname advancedwebtesting.com
+ 
+ #  TAG: unique_hostname
+ #	If you want to have multiple machines with the same
+@@ -5535,6 +5543,7 @@
+ #	X-Forwarded-For entries, and place itself as the sole entry.
+ #Default:
+ # forwarded_for on
++forwarded_for delete
+ 
+ #  TAG: cachemgr_passwd
+ #	Specify passwords for cachemgr operations.
