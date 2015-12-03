@@ -1,14 +1,23 @@
 --- squid.conf.orig	2015-11-29 19:24:57.901671910 -0500
-+++ squid.conf	2015-11-29 20:26:50.961579848 -0500
-@@ -340,6 +340,7 @@
++++ squid.conf	2015-12-03 00:34:58.369557605 -0500
+@@ -340,6 +340,8 @@
  ##auth_param basic credentialsttl 2 hours
  #Default:
  # none
++auth_param basic realm Advanced Web Testing
 +auth_param basic program /usr/lib/squid3/ncsa_auth /etc/squid3/passwd
  
  #  TAG: authenticate_cache_garbage_interval
  #	The time period between garbage collection across the username cache.
-@@ -823,12 +824,13 @@
+@@ -702,6 +704,7 @@
+ #acl localnet src 192.168.0.0/16	# RFC1918 possible internal network
+ #acl localnet src fc00::/7       # RFC 4193 local private network range
+ #acl localnet src fe80::/10      # RFC 4291 link-local (directly plugged) machines
++acl localnet srcdomain .hosts.advancedwebtesting.net
+ 
+ acl SSL_ports port 443
+ acl Safe_ports port 80		# http
+@@ -823,12 +826,13 @@
  http_access deny !Safe_ports
  
  # Deny CONNECT to other than secure SSL ports
@@ -24,8 +33,12 @@
  
  #
  # INSERT YOUR OWN RULE(S) HERE TO ALLOW ACCESS FROM YOUR CLIENTS
-@@ -840,6 +842,9 @@
- #http_access allow localnet
+@@ -837,9 +841,12 @@
+ # Example rule allowing access from your local networks.
+ # Adapt localnet in the ACL section to list your (internal) IP networks
+ # from where browsing should be allowed
+-#http_access allow localnet
++http_access allow localnet
  http_access allow localhost
  
 +acl authenticated proxy_auth REQUIRED
@@ -34,7 +47,7 @@
  # And finally deny all other access to this proxy
  http_access deny all
  
-@@ -1133,7 +1138,7 @@
+@@ -1133,7 +1140,7 @@
  #
  
  # Squid normally listens to port 3128
@@ -43,7 +56,7 @@
  
  #  TAG: https_port
  # Note: This option is only available if Squid is rebuilt with the
-@@ -3333,6 +3338,7 @@
+@@ -3333,6 +3340,7 @@
  #	replies as required by RFC2616.
  #Default:
  # via on
@@ -51,7 +64,7 @@
  
  #  TAG: ie_refresh	on|off
  #	Microsoft Internet Explorer up until version 5.5 Service
-@@ -3683,6 +3689,7 @@
+@@ -3683,6 +3691,7 @@
  #	mail if the cache dies.  The default is "webmaster."
  #Default:
  # cache_mgr webmaster
@@ -59,7 +72,15 @@
  
  #  TAG: mail_from
  #	From: email-address for mail sent when the cache dies.
-@@ -3742,6 +3749,7 @@
+@@ -3733,6 +3742,7 @@
+ #	Suppress Squid version string info in HTTP headers and HTML error pages.
+ #Default:
+ # httpd_suppress_version_string off
++httpd_suppress_version_string on
+ 
+ #  TAG: visible_hostname
+ #	If you want to present a special hostname in error messages, etc,
+@@ -3742,6 +3752,7 @@
  #	names with this setting.
  #Default:
  # visible_hostname localhost
@@ -67,7 +88,7 @@
  
  #  TAG: unique_hostname
  #	If you want to have multiple machines with the same
-@@ -5535,6 +5543,7 @@
+@@ -5535,6 +5546,7 @@
  #	X-Forwarded-For entries, and place itself as the sole entry.
  #Default:
  # forwarded_for on

@@ -1,8 +1,0 @@
-/home/*/x.log /home/*/selenium.log /home/*/batch.log {
-	rotate 10
-	daily
-	compress
-	notifempty
-	copytruncate
-	missingok
-}
