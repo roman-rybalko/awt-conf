@@ -1,0 +1,3 @@
+
+[squid_*]
+env.squidport 64312

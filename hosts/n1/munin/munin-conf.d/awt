@@ -12,3 +12,15 @@
 
 [n5.hosts.advancedwebtesting.net]
     address n5.hosts.advancedwebtesting.net
+
+[n6.hosts.advancedwebtesting.net]
+    address n6.hosts.advancedwebtesting.net
+
+[n7.hosts.advancedwebtesting.net]
+    address n7.hosts.advancedwebtesting.net
+
+[p1.hosts.advancedwebtesting.net]
+    address p1.hosts.advancedwebtesting.net
+
+[p2.hosts.advancedwebtesting.net]
+    address p2.hosts.advancedwebtesting.net
