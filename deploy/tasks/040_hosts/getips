@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+import sys
+import socket
+
+sys.argv.reverse()
+sys.argv.pop()
+sys.argv.reverse()
+for h in sys.argv:
+	addrs = set()
+	for a in socket.getaddrinfo(h, 0):
+		addrs.add(a[4][0])
+	for a in addrs:
+		print a

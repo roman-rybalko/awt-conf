@@ -8,7 +8,7 @@ apt-get --purge --yes remove sasl2-bin xinetd bind9 cups \
 	sendmail sendmail-base sendmail-bin sendmail-cf sendmail-doc \
 	nfs-common rpcbind \
 	samba samba-common \
-	apache2 apache2-doc apache2-mpm-prefork apache2.2-bin apache2.2-common \
+	apache2 apache2-doc apache2-mpm-prefork apache2.2-bin apache2.2-common apache2-utils \
 	|| true
 
 sed -i '/exit/ d' /etc/rc.local

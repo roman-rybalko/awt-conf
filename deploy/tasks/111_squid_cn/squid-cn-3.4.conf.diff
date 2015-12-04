@@ -1,0 +1,18 @@
+--- squid.conf.orig2	2015-12-04 23:45:13.681865644 +0300
++++ squid.conf	2015-12-04 23:54:42.832260774 +0300
+@@ -2810,6 +2810,7 @@
+ #	
+ #Default:
+ # none
++cache_peer 167.88.102.32 parent 55030 0 no-query proxy-only default login=awt001:e3MTuOgBs9xojfAe0HLIPT
+ 
+ #  TAG: cache_peer_domain
+ #	Use to limit the domains for which a neighbor cache will be
+@@ -6423,6 +6424,7 @@
+ #	See http://wiki.squid-cache.org/SquidFaq/SquidAcl for details.
+ #Default:
+ # Allow DNS results to be used for this request.
++never_direct allow all
+ 
+ # ADVANCED NETWORKING OPTIONS
+ # -----------------------------------------------------------------------------

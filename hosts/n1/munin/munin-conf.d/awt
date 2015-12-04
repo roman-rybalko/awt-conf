@@ -24,3 +24,6 @@
 
 [p2.hosts.advancedwebtesting.net]
     address p2.hosts.advancedwebtesting.net
+
+[p3.hosts.advancedwebtesting.net]
+    address p3.hosts.advancedwebtesting.net
