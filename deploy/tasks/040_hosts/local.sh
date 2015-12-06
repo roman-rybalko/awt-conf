@@ -7,3 +7,6 @@ for h in $HOSTS; do
 		echo "$a $host" >> hosts
 	done
 done
+for a in `./getips deploy.hosts.advancedwebtesting.net`; do
+	echo "$a deploy" >> hosts
+done
