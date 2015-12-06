@@ -1,0 +1,19 @@
+diff --git a/hosts/n1/server/config.sample.php b/hosts/n1/server/config.sample.php
+index 4bdf8c2..43c627a 100644
+--- a/hosts/n1/server/config.sample.php
++++ b/hosts/n1/server/config.sample.php
+@@ -35,6 +35,14 @@ class Config {
+ 	const PURGE_PERIOD = 42; // days
+ 	const BILLING_PURGE_PERIOD = 732; // days
+ 	const BILLING_PENDING_PURGE_PERIOD = 1; // days
++	public static $proxy = [
++		'us' => 'http://www.dev/proxy-us.js',
++		'eu' => 'localhost:3128',
++		'ru' => 'http://www.dev/proxy-ru.js',
++		'cn' => 'proxy-cn.hosts.advancedwebtesting.net:64312',
++		'default' => 'http://www.dev/proxy-default.js',
++		'custom' => ''
++	];
+ }
+ 
+ \Config::$rootPath = __DIR__ . '/';

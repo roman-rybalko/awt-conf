@@ -35,6 +35,14 @@ class Config {
 	const PURGE_PERIOD = 42;  // days
 	const BILLING_PURGE_PERIOD = 732;  // days
 	const BILLING_PENDING_PURGE_PERIOD = 1;  // days
+	public static $proxy = [
+		'us' => 'proxy-us.hosts.advancedwebtesting.net:64312',
+		'eu' => 'proxy-eu.hosts.advancedwebtesting.net:64312',
+		'ru' => 'proxy-ru.hosts.advancedwebtesting.net:64312',
+		'cn' => 'proxy-cn.hosts.advancedwebtesting.net:64312',
+		'default' => 'proxy-default.hosts.advancedwebtesting.net:64312',
+		'custom' => ''
+	];
 }
 
 \Config::$rootPath = __DIR__ . '/';
