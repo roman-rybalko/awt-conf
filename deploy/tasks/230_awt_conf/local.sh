@@ -1,3 +1,4 @@
 #!/bin/sh -ex
 . ./local.conf
-cp $SRCD/n1/server/config.*.php ./
+
+cp $CNFD/services/server/config.*.php ./

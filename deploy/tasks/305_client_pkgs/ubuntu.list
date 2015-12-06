@@ -1,0 +1,2 @@
+deb http://mirror.yandex.ru/ubuntu/ trusty main restricted universe multiverse
+deb http://mirror.yandex.ru/ubuntu/ trusty-updates main restricted universe multiverse

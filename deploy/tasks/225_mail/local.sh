@@ -1,4 +1,4 @@
 #!/bin/sh -ex
 . ./local.conf
 
-tar -zcf `pwd`/mail.tgz -C $SRCD mail
+tar -zcf `pwd`/mail.tgz -C $SRCD/server/ mail
