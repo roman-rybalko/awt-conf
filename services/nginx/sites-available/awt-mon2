@@ -1,0 +1,8 @@
+server {
+	listen 80;
+	listen [::]:80;
+	server_name awt-mon2;
+	root /var/cache/munin/www;
+	index index.html;
+	try_files $uri $uri/ =404;
+}
