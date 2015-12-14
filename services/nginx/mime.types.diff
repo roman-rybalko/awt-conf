@@ -1,0 +1,10 @@
+--- mime.types.orig	2014-12-01 14:12:00.000000000 +0300
++++ mime.types	2015-12-15 01:31:28.134354736 +0300
+@@ -3,6 +3,7 @@
+     text/html                             html htm shtml;
+     text/css                              css;
+     text/xml                              xml;
++    text/xsl                              xsl;
+     image/gif                             gif;
+     image/jpeg                            jpeg jpg;
+     application/javascript                js;
