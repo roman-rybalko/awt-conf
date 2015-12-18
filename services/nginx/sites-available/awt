@@ -12,6 +12,7 @@ server {
 	location /ui/ {
 		try_files $uri $uri/ =404;
 		location ~ \.php$ {
+			expires off;
 			include snippets/fastcgi-php.conf;
 			fastcgi_pass unix:/var/run/php5-fpm.sock;
 		}
@@ -19,6 +20,7 @@ server {
 	location /si/ {
 		try_files $uri $uri/ =404;
 		location ~ \.php$ {
+			expires off;
 			include snippets/fastcgi-php.conf;
 			fastcgi_pass unix:/var/run/php5-fpm-system.sock;
 		}
@@ -26,6 +28,7 @@ server {
 	location /ai/ {
 		try_files $uri $uri/ =404;
 		location ~ \.php$ {
+			expires off;
 			include snippets/fastcgi-php.conf;
 			fastcgi_pass unix:/var/run/php5-fpm-admin.sock;
 		}
