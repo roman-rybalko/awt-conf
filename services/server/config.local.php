@@ -46,3 +46,4 @@ class Config {
 }
 
 \Config::$rootPath = __DIR__ . '/';
+date_default_timezone_set('UTC');

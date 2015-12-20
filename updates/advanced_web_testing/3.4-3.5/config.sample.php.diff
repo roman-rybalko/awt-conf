@@ -1,0 +1,9 @@
+diff --git a/services/server/config.sample.php b/services/server/config.sample.php
+index 43c627a..7ee8f05 100644
+--- a/services/server/config.sample.php
++++ b/services/server/config.sample.php
+@@ -46,3 +46,4 @@ class Config {
+ }
+ 
+ \Config::$rootPath = __DIR__ . '/';
++date_default_timezone_set('UTC');
