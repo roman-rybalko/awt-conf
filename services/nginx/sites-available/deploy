@@ -1,7 +1,7 @@
 server {
 	listen 80;
 	listen [::]:80;
-	server_name deploy;
+	server_name deploy deploy.hosts.advancedwebtesting.net;
 	root /var/www/deploy;
 	index index.html;
 	try_files $uri $uri/ =404;
