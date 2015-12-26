@@ -14,8 +14,6 @@ apt-get --purge --yes remove sasl2-bin xinetd bind9 cups \
 sed -i '/exit/ d' /etc/rc.local
 cat rc.sh >> /etc/rc.local
 
-sed -i 's/ftp.debian.org/ftp.de.debian.org/' /etc/apt/sources.list
-
 apt-key add wheezy.keys
 apt-get update
 apt-get --purge --yes dist-upgrade
