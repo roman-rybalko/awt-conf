@@ -3,4 +3,4 @@
 
 cp -Rv $SRCD/scripts/client/system ./
 mkdir system/logrotate
-cp -Rv $CNFD/services/logrotate/awt-client system/logrotate/
+mv -vf awt-client system/logrotate/

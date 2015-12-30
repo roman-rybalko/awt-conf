@@ -1,0 +1,7 @@
+[mysqld]
+log-bin = mysql-bin
+binlog-format = ROW
+binlog-ignore-db = mysql
+expire-logs-days = 2
+innodb-flush-log-at-trx-commit = 1
+sync-binlog = 1

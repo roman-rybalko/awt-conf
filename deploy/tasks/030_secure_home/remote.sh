@@ -1,3 +1,3 @@
 #!/bin/sh -ex
 . ./remote.conf
-chmod -v og-rwx /home/*
+chmod -v og-rwx /home/* /root

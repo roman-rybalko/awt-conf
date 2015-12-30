@@ -18,7 +18,7 @@ update-rc.d -f awt-client remove
 rm -f /etc/init.d/awt-client /etc/logrotate.d/awt-client
 
 cd $wd
-crontab -l | grep -v /root/watchdog > root.crontab
-crontab root.crontab
-rm -f root.crontab /root/watchdog.sh
-rm -vf /etc/apt/sources.list.d/ubuntu.list
+crontab -l | grep -v /root/watchdog > ct || true
+cat ct
+crontab ct
+rm -vf /root/watchdog.sh /etc/apt/sources.list.d/ubuntu.list

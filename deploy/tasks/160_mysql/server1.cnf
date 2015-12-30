@@ -1,0 +1,4 @@
+[mysqld]
+server-id = 1
+auto-increment-offset = 1
+auto-increment-increment = 2

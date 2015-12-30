@@ -1,0 +1,5 @@
+
+iface eth0 inet6 static
+	address 2a01:230:2:6::35b
+	netmask 64
+	gateway 2a01:230:2:6::1

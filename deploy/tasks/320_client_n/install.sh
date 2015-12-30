@@ -26,12 +26,10 @@ echo root > /home/client$N/.forward
 chown -v client$N:client$N /home/client$N/.forward
 chmod -v a-w,og-rx /home/client$N/.forward
 
-crontab -l > root.crontab || true
-if ! grep /root/watchdog.sh root.crontab; then
-	echo "*/10 * * * * /root/watchdog.sh 10 /home/client*/config.sh" >> root.crontab
-	crontab root.crontab
-fi
-rm -f root.crontab
+crontab -l | grep -v /root/watchdog.sh > ct || true
+grep PATH ct || echo 'PATH=/bin:/sbin:/usr/bin:/usr/sbin' >> ct
+echo '*/10 * * * * /root/watchdog.sh 10 /home/client*/config.sh' >> ct
+crontab ct
 
 service awt-client status || true
 service awt-client restart

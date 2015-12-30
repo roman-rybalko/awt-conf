@@ -1,0 +1,10 @@
+--- munin-node.conf.orig	2015-12-07 10:58:10.061339419 +0000
++++ munin-node.conf	2015-12-07 10:59:17.870717775 +0000
+@@ -44,6 +44,7 @@
+ allow ^127\.0\.0\.1$
+ allow ^::1$
+ allow ^2a01:230:2:6::70$
++allow ^2a01:230:2:6::35b$
+ 
+ # If you have installed the Net::CIDR perl module, you can use one or more
+ # cidr_allow and cidr_deny address/mask patterns.  A connecting client must

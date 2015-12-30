@@ -15,14 +15,5 @@ service awt-client status || true
 cp -af watchdog.sh /root/
 cp -af logrotate/* /etc/logrotate.d/
 
-crontab -l > root.crontab || true
-if [ -z "`grep PATH root.crontab`" ]; then
-	echo 'PATH=/bin:/sbin:/usr/bin:/usr/sbin' > root.crontab.new
-	cat root.crontab >> root.crontab.new
-	crontab root.crontab.new
-	crontab -l
-fi
-
 cd ..
 rm -Rvf system
-

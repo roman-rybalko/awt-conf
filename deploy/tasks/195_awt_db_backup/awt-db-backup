@@ -1,0 +1,6 @@
+/var/backups/awt/db.sql {
+	rotate 365
+	daily
+	compress
+	missingok
+}
