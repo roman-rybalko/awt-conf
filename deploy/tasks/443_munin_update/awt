@@ -1,0 +1,50 @@
+[n1.hosts.advancedwebtesting.net]
+    address n1.hosts.advancedwebtesting.net
+
+[n2.hosts.advancedwebtesting.net]
+    address n2.hosts.advancedwebtesting.net
+
+[n3.hosts.advancedwebtesting.net]
+    address n3.hosts.advancedwebtesting.net
+
+[n4.hosts.advancedwebtesting.net]
+    address n4.hosts.advancedwebtesting.net
+
+[n5.hosts.advancedwebtesting.net]
+    address n5.hosts.advancedwebtesting.net
+
+[n6.hosts.advancedwebtesting.net]
+    address n6.hosts.advancedwebtesting.net
+
+[n7.hosts.advancedwebtesting.net]
+    address n7.hosts.advancedwebtesting.net
+
+[s1.hosts.advancedwebtesting.net]
+    address s1.hosts.advancedwebtesting.net
+
+[s2.hosts.advancedwebtesting.net]
+    address s2.hosts.advancedwebtesting.net
+
+[p1.hosts.advancedwebtesting.net]
+    address p1.hosts.advancedwebtesting.net
+
+[p2.hosts.advancedwebtesting.net]
+    address p2.hosts.advancedwebtesting.net
+
+[p3.hosts.advancedwebtesting.net]
+    address p3.hosts.advancedwebtesting.net
+
+[p4.hosts.advancedwebtesting.net]
+    address p4.hosts.advancedwebtesting.net
+
+[c1.hosts.advancedwebtesting.net]
+    address c1.hosts.advancedwebtesting.net
+
+[c2.hosts.advancedwebtesting.net]
+    address c2.hosts.advancedwebtesting.net
+
+[c3.hosts.advancedwebtesting.net]
+    address c3.hosts.advancedwebtesting.net
+
+[c4.hosts.advancedwebtesting.net]
+    address c4.hosts.advancedwebtesting.net
