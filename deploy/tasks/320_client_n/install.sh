@@ -30,6 +30,7 @@ crontab -l | grep -v /root/watchdog.sh > ct || true
 grep PATH ct || echo 'PATH=/bin:/sbin:/usr/bin:/usr/sbin' >> ct
 echo '*/10 * * * * /root/watchdog.sh 10 /home/client*/config.sh' >> ct
 crontab ct
+rm -vf ct
 
 service awt-client status || true
 service awt-client restart
