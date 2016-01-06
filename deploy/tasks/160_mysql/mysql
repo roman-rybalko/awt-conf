@@ -1,0 +1,5 @@
+
+[mysql_*]
+env.mysqlconnection DBI:mysql:host=localhost
+env.mysqluser munin
+env.mysqlpassword NBS2UpsgfXzqagwIMBQKKZ
