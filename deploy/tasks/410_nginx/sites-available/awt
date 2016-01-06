@@ -10,7 +10,6 @@ server {
 		root /var/www/awt/lp;
 	}
 	location /ui/ {
-		try_files $uri $uri/ =404;
 		location ~ \.php$ {
 			expires off;
 			include snippets/fastcgi-php.conf;
@@ -18,7 +17,6 @@ server {
 		}
 	}
 	location /si/ {
-		try_files $uri $uri/ =404;
 		location ~ \.php$ {
 			expires off;
 			include snippets/fastcgi-php.conf;
@@ -26,7 +24,6 @@ server {
 		}
 	}
 	location /ai/ {
-		try_files $uri $uri/ =404;
 		location ~ \.php$ {
 			expires off;
 			include snippets/fastcgi-php.conf;
