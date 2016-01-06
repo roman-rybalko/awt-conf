@@ -15,7 +15,8 @@ if ! patch -b /etc/squid3/squid.conf < squid-3.1.conf.diff; then
 fi
 service squid3 reload
 
-chown -v root:root squid
+chown -v root:munin squid
+chmod -v 0440 squid
 mv -vf squid /etc/munin/plugin-conf.d/
 ln -svf /usr/share/munin/plugins/squid_* /etc/munin/plugins/
 service munin-node restart
