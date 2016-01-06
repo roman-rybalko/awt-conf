@@ -21,8 +21,11 @@ chown -v root:root /var/www/html/robots.txt /etc/nginx/conf.d/* /etc/nginx/sites
 
 cd /etc/nginx/sites-enabled/
 rm -vf *
-for s in awt awt-mon catchall deploy; do
+for s in awt awt-mon catchall deploy status; do
 	ln -sv ../sites-available/$s ./
 done
 
 service nginx restart
+
+ln -svf /usr/share/munin/plugins/nginx_* /etc/munin/plugins/
+service munin-node restart
