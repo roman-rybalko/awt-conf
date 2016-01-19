@@ -7,3 +7,4 @@ for h in $HOSTS; do
 		echo "$a $host" >> hosts
 	done
 done
+cat sl-hosts >> hosts
