@@ -16,7 +16,7 @@ class Config {
 	const MAIL_TEMPLATE_PATH = 'mail/';
 	const UI_URL = 'https://advancedwebtesting.com/ui/';
 	const UI_PATH = 'ui/';
-	const SIGNUP_BONUS = 200;
+	const SIGNUP_BONUS = 1000;
 	const PAYPAL_USER = 'paypal_api1.advancedwebtesting.com';
 	const PAYPAL_PASSWORD = 'NXN3A2C2DDFU9M4V';
 	const PAYPAL_SIGNATURE = 'AN4Wox6XAN2kmJLCRapsav7rwlB6Agsvbs67aQHco9tp3MSBDvf-9LJI';
