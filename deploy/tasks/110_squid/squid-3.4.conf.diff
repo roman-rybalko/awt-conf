@@ -4,7 +4,7 @@
  ##auth_param basic credentialsttl 2 hours
  #Default:
  # none
-+auth_param basic realm Advanced Web Testing
++auth_param basic realm AWT Proxy
 +auth_param basic program /usr/lib/squid3/basic_ncsa_auth /etc/squid3/passwd
  
  #  TAG: authenticate_cache_garbage_interval
