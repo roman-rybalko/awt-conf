@@ -24,7 +24,7 @@ module.exports = {
 	//selenium_server: 'http://localhost:4411/wd/hub',  /// url | null
 	//selenium_server: 'http://localhost:5511/',  /// url | null
 	//selenium_port: 4411,  /// integer 1024-65535 | null
-	selenium_timeout: 10000,  /// msec
+	selenium_timeout: 30000,  /// msec
 	selenium_fullscreen: false,
 	selenium_scrn: scrn,  /// fn(selenium)
 	batch_count: 1,  /// a starving bug somewhere prevents efficient parallel run

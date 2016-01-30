@@ -26,7 +26,7 @@ module.exports = {
 	//selenium_server: 'http://localhost:5518/',  /// url | null
 	selenium_port: 4418,  /// integer 1024-65535 | null
 	selenium_version: '2.43.1', // opera  /// string | null
-	selenium_timeout: 10000,  /// msec
+	selenium_timeout: 30000,  /// msec
 	selenium_fullscreen: false,
 	selenium_scrn: scrn,  /// fn(selenium)
 	batch_count: 1,  /// a starving bug somewhere prevents efficient parallel run
