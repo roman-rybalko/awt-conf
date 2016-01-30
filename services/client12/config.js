@@ -8,8 +8,8 @@ var scrn = require('./lib/selutil').get_scrn;
 module.exports = {
 	server_url: 'https://advancedwebtesting.com/si/task.php',
 	server_token: 'iuB7lPg9Q3jSc9B95BFKRnkWkixmV3I1qQIuenRhsR',
-	task_type: 'phantomjs_mobile',
-	node_id: 'XXXHOSTNAMEXXX-c3',
+	task_type: 'phantomjs_desktop',
+	node_id: 'XXXHOSTNAMEXXX-c12',
 	//selenium_start_cb: spawncb('printf', ['selenium_start_cb called\n']),  /// fn(task) | null
 	//selenium_finish_cb: spawncb('printf', ['selenium_finish_cb called\n']),  /// fn(task, fails, scrns) | null
 	selenium_capabilities: {'phantomjs.cli.args': ['--webdriver-logfile=../selenium.log']},  /// {name: value} | null
@@ -21,11 +21,11 @@ module.exports = {
 	//selenium_browser: 'firefox',  /// string | null
 	selenium_browser: 'phantomjs',  /// string | null
 	//selenium_browser: 'internet explorer',  /// string | null
-	//selenium_server: 'http://localhost:4413/wd/hub',  /// url | null
-	//selenium_server: 'http://localhost:5513/',  /// url | null
-	//selenium_port: 4413,  /// integer 1024-65535 | null
+	//selenium_server: 'http://localhost:4422/wd/hub',  /// url | null
+	//selenium_server: 'http://localhost:5522/',  /// url | null
+	//selenium_port: 4422,  /// integer 1024-65535 | null
 	selenium_timeout: 30000,  /// msec
-	selenium_fullscreen: false,
+	selenium_fullscreen: true,
 	selenium_scrn: scrn,  /// fn(selenium)
 	batch_count: 1,  /// a starving bug somewhere prevents efficient parallel run
 	batch_timeout: 5000,  /// msec
@@ -35,8 +35,8 @@ module.exports = {
 	//batch_finish_cb: spawncb('../cleanup.sh'),  /// fn(err, val) | null
 	batch_finish_cb: function() { killchtreecb(process.pid, 'SIGKILL')(); spawncb('../cleanup.sh')(); },  /// fn(err, val) | null
 	//batch_finish_cb: killchtreecb(process.pid, 'SIGKILL'),  /// fn(err, val) | null
-	//x_display: 13,  /// integer | null
-	//x_auth: "/tmp/xauth13",  /// integer | null
+	//x_display: 22,  /// integer | null
+	//x_auth: "/tmp/xauth22",  /// integer | null
 	//x_scrsize: "1200x1024x24",  /// integer | null
 	//x_scrsize: "1024x1200x24",  /// integer | null
 	//x_scrsize: "800x480x24",  /// integer | null
