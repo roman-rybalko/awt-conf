@@ -14,4 +14,8 @@ cp -v 10-no-ipv6.conf /etc/sysctl.d/
 sed -i '/exit/ d' /etc/rc.local
 cat rc.sh >> /etc/rc.local
 
+chown -v root:root tmp
+cp -v tmp /etc/init.d/
+update-rc.d tmp defaults
+
 shutdown -r
