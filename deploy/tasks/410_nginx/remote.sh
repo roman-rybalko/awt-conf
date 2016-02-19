@@ -21,7 +21,7 @@ chown -v root:root /var/www/html/robots.txt /etc/nginx/conf.d/* /etc/nginx/sites
 
 cd /etc/nginx/sites-enabled/
 rm -vf *
-for s in awt awt-mon catchall deploy status; do
+for s in awt awt-mon catchall deploy status webmonit; do
 	ln -sv ../sites-available/$s ./
 done
 
