@@ -30,4 +30,7 @@ server {
 			fastcgi_pass unix:/var/run/php5-fpm-admin.sock;
 		}
 	}
+	location /ui/results/ {  # prevent execution from uploads dir
+		try_files $uri =404;
+	}
 }
