@@ -4,3 +4,4 @@ hostname $h
 
 service postfix restart || true
 service squid3 restart || true
+service munin-node restart || true
