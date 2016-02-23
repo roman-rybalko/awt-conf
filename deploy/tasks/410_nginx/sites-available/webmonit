@@ -1,7 +1,7 @@
 server {
 	listen 80;
 	listen [::]:80;
-	server_name webmonit.ru xn--90abffb3cgipic.xn--p1ai;
+	server_name webmonit.ru xn--90abffb3cgipic.xn--p1ai xn--90abjb5bfhnhcp.xn--p1ai;
 	root /var/www/awt/lp-mon;
 	index index.html index.php;
 	location / {
