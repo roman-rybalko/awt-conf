@@ -30,7 +30,7 @@ class Config {
 	const WEBMONEY_WEEK_LIMIT = 700;
 	const WEBMONEY_MONTH_LIMIT = 1400;
 	const TASK_TIMEOUT = 600;  // seconds
-	const TASK_ACTION_TIMEOUT = 10;  // seconds
+	const TASK_ACTION_TIMEOUT = 30;  // seconds
 	const TEST_MAX_ACTIONS_CNT = 42;
 	const PURGE_PERIOD = 42;  // days
 	const BILLING_PURGE_PERIOD = 732;  // days
