@@ -5,4 +5,6 @@ grep -v .hosts.advancedwebtesting.net /etc/hosts | grep -v deploy > /etc/hosts.n
 cat hosts >> /etc/hosts.new
 mv -vf /etc/hosts.new /etc/hosts
 cat /etc/hosts
-[ ! -e /etc/squid3 ] || service squid3 reload
+
+service squid3 reload || true
+service dnsmasq reload || true
