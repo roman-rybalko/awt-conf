@@ -17,6 +17,7 @@ module.exports = {
 	//selenium_capabilities: {chromeOptions: {mobileEmulation: {userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/600.1.3 (KHTML, like Gecko) Version/8.0 Mobile/12A4345d Safari/600.1.4', deviceMetrics: {width: 667, height: 375, pixelRatio: 2}}}},  /// {name: value} | null
 	//selenium_capabilities: {chromeOptions: {mobileEmulation: {userAgent: 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53', deviceMetrics: {width: 1024, height: 768, pixelRatio: 2}}}},  /// {name: value} | null
 	//selenium_capabilities: {chromeOptions: {mobileEmulation: {userAgent: 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.20 Mobile Safari/537.36', deviceMetrics: {width: 690, height: 387, pixelRatio: 3.5}}}},  /// {name: value} | null
+	selenium_capabilities: {'firefox_profile': new (require('selenium-webdriver/firefox')).Profile('../profile')},
 	//selenium_browser: 'chrome',  /// string | null
 	selenium_browser: 'firefox',  /// string | null
 	//selenium_browser: 'phantomjs',  /// string | null

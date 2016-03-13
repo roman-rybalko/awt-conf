@@ -12,8 +12,10 @@ N=`cat client_n`
 wget http://deploy/client/home.tgz -O - | tar -xz
 
 cd home
+tar -xf profile.tgz && rm -f profile.tgz || true
 chown -R root:root .
 chmod -R a+rX,a-ws .
+chmod -R u+w profile || true
 
 H=`hostname -s`
 useradd -m -U client$N
