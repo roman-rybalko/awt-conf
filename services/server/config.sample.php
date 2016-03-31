@@ -11,7 +11,6 @@ class Config {
 	const MAIL_PORT = 587;
 	const MAIL_USER = 'test@advancedwebtesting.com';
 	const MAIL_PASSWORD = 'test12';
-	const MAIL_SENDER_NAME = 'Advanced Web Testing';
 	const MAIL_SENDER_EMAIL = 'test@advancedwebtesting.com';
 	const MAIL_TEMPLATE_PATH = 'mail/';
 	const UI_URL = 'http://www/awt/server/ui/';

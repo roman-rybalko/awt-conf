@@ -16,7 +16,7 @@ create table task_actions(task_id integer not null, type varbinary(256) not null
 create unique index task_actions_idx on task_actions(task_id, action_id);
 create table task_types(type_id integer primary key auto_increment not null, name varbinary(256) not null, parent_type_id integer);
 create index task_types_idx on task_types(name);
-create table settings(user_id integer primary key not null, email varbinary(256), task_fail_email_report integer(1), task_success_email_report integer(1), undeletable integer(1));
+create table settings(user_id integer primary key not null, email varbinary(256), task_fail_email_report integer(1), task_success_email_report integer(1), task_fail_emails varbinary(1024), task_success_emails varbinary(1024), ui varbinary(256), undeletable integer(1));
 create table stats(user_id integer not null, time integer not null, tasks_started integer not null default 0, tasks_finished integer not null default 0, tasks_failed integer not null default 0, actions_executed integer not null default 0);
 create unique index stats_idx1 on stats(user_id, time);
 create index stats_idx2 on stats(time);
