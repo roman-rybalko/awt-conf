@@ -32,8 +32,8 @@ module.exports = {
 	//batch_start_cb: spawncb('printf', ['batch_start_cb called\n']),  /// fn() | null
 	batch_start_cb: spawncb('../init.sh'),  /// fn() | null
 	//batch_finish_cb: spawncb('printf', ['batch_finish_cb called\n']),  /// fn(err, val) | null
-	//batch_finish_cb: spawncb('../cleanup.sh'),  /// fn(err, val) | null
-	batch_finish_cb: function() { killchtreecb(process.pid, 'SIGKILL')(); spawncb('../cleanup.sh')(); },  /// fn(err, val) | null
+	batch_finish_cb: spawncb('../cleanup.sh'),  /// fn(err, val) | null
+	//batch_finish_cb: function() { killchtreecb(process.pid, 'SIGKILL')(); spawncb('../cleanup.sh')(); },  /// fn(err, val) | null
 	//batch_finish_cb: killchtreecb(process.pid, 'SIGKILL'),  /// fn(err, val) | null
 	x_display: 11,  /// integer | null
 	x_auth: "/tmp/xauth11",  /// integer | null
