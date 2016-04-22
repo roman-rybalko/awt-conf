@@ -3,8 +3,8 @@
 @@ -35,6 +35,7 @@
  allow ^127\.0\.0\.1$
  allow ^::1$
- allow ^2a01:230:2:6::70$
-+allow ^213\.159\.215\.200$
+ allow ^2a01:230:2:6::35b$
++allow ^92\.63\.99\.29$
  
  # If you have installed the Net::CIDR perl module, you can use one or more
  # cidr_allow and cidr_deny address/mask patterns.  A connecting client must
