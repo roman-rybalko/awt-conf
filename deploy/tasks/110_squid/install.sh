@@ -10,7 +10,7 @@ chmod -v 0400 passwd
 mv -vf passwd /etc/squid3/
 if ! patch -b /etc/squid3/squid.conf < squid-3.1.conf.diff; then
 	mv -vf /etc/squid3/squid.conf.orig /etc/squid3/squid.conf
-	rm -vf /etc/squid3/squid.conf.*
+	rm -vf /etc/squid3/squid.conf.rej
 	patch -b /etc/squid3/squid.conf < squid-3.4.conf.diff
 fi
 service squid3 reload
