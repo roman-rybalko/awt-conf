@@ -10,6 +10,7 @@ if ! grep 64022 /etc/ssh/sshd_config; then
 	service ssh restart
 fi
 
+cat /etc/resolv.conf
 echo "nameserver 77.88.8.8" > /etc/resolv.conf
 echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 
