@@ -15,6 +15,7 @@ mv -vf sites-available/* /etc/nginx/sites-available/
 mv -vf snippets/* /etc/nginx/snippets/
 
 patch -b /etc/nginx/mime.types < mime.types.diff
+patch -b /etc/nginx/nginx.conf < nginx.conf.diff
 
 chmod -v 0444 /var/www/html/robots.txt /var/www/html/index.html /etc/nginx/conf.d/* /etc/nginx/sites-available/* /etc/nginx/snippets/*
 chown -v root:root /var/www/html/robots.txt /etc/nginx/conf.d/* /etc/nginx/sites-available/* /etc/nginx/snippets/*
