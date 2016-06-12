@@ -1,19 +1,6 @@
 #!/bin/sh -ex
 . ./remote.conf
 
-MYSQL_MASTER4=`cat mysql_master4`
-[ -n "$MYSQL_MASTER4" ]
-
-sed -i "s/MYSQL_MASTER/$MYSQL_MASTER4/" mysql-proxy.cnf
-sed -i "s/MYSQL_PROXY_PORT/$MYSQL_PROXY_PORT/" mysql-proxy.cnf
-chmod -v 0400 mysql-proxy.cnf
-chown root:root -v mysql-proxy.cnf
-mv -vf mysql-proxy.cnf /etc/mysql/
-
-service mysql-proxy start
-service mysql-proxy stop
-service mysql-proxy start
-
 MYSQL_MASTER6=`cat mysql_master6`
 [ -n "$MYSQL_MASTER6" ]
 MYSQL_SLAVE6=`cat mysql_slave6`

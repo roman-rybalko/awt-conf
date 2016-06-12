@@ -18,8 +18,8 @@ case $H in
 				rm -vf *1.cnf *1.sql
 			;;
 			s2.*|s2)
-			;;
 				rm -vf *2.cnf *2.sql
+			;;
 			*)
 				exit 1
 			;;

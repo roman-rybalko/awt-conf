@@ -15,7 +15,7 @@ ip6tables -t nat -D POSTROUTING -p tcp --dport $MYSQL_PORT -s $MYSQL_SLAVE6 -d $
 
 rm -vf /etc/sysctl.d/50-mysql-ipv6-forwarding.conf
 
-MYSQL_RPXOY_SLAVE4=`cat mysql_proxy_slave4`
-[ -n "$MYSQL_RPXOY_SLAVE4" ]
+MYSQL_SLAVE4=`cat mysql_slave4`
+[ -n "$MYSQL_SLAVE4" ]
 
-iptables -D INPUT -p tcp --dport $MYSQL_PROXY_PORT '!' -i lo '!' -s $MYSQL_RPXOY_SLAVE4 -j REJECT --reject-with tcp-reset || true
+iptables -D INPUT -p tcp --dport $MYSQL_PROXY_PORT '!' -i lo '!' -s $MYSQL_SLAVE4 -j REJECT --reject-with tcp-reset || true

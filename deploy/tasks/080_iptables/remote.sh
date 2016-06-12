@@ -17,6 +17,6 @@ ip6tables-restore /etc/default/ip6tables.save
 
 cat /etc/rc.local
 cat /etc/default/iptables.save
-diff -u /etc/default/iptables.save.bak /etc/default/iptables.save || true
 cat /etc/default/ip6tables.save
+diff -u /etc/default/iptables.save.bak /etc/default/iptables.save || true
 diff -u /etc/default/ip6tables.save.bak /etc/default/ip6tables.save || true

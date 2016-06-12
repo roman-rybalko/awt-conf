@@ -10,4 +10,4 @@ admin-username = slave
 admin-password = vaNH6KVuWHaMfGCwma77OE
 admin-lua-script = /usr/lib/mysql-proxy/lua/admin.lua
 proxy-address = /var/run/mysqld/mysqld.sock
-proxy-backend-addresses = MYSQL_MASTER:MYSQL_PROXY_PORT
+proxy-backend-addresses = MYSQL_MASTER:MYSQL_PORT

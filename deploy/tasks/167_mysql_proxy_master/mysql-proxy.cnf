@@ -9,5 +9,5 @@ admin-address = 127.0.0.1:4401
 admin-username = master
 admin-password = ddFysns5hxB5iK5wlAEbl9
 admin-lua-script = /usr/lib/mysql-proxy/lua/admin.lua
-proxy-address = 0.0.0.0:MYSQL_PROXY_PORT
+proxy-address = 0.0.0.0:MYSQL_PORT
 proxy-backend-addresses = /var/run/mysqld/mysqld.sock
