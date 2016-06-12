@@ -1,0 +1,2 @@
+ENABLED="true"
+OPTIONS="--defaults-file=/etc/mysql/mysql-proxy.cnf"

@@ -1,0 +1,5 @@
+[mysqld]
+socket = /disable
+
+[mysqld_safe]
+socket = /disable

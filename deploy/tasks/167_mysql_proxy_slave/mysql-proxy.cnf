@@ -1,0 +1,13 @@
+[mysql-proxy]
+daemon = true
+user = mysql
+proxy-skip-profiling = true
+keepalive = true
+pid-file = /var/run/mysql-proxy.pid
+log-file = /var/log/mysql.log
+admin-address = 127.0.0.1:4401
+admin-username = slave
+admin-password = vaNH6KVuWHaMfGCwma77OE
+admin-lua-script = /usr/lib/mysql-proxy/lua/admin.lua
+proxy-address = /var/run/mysqld/mysqld.sock
+proxy-backend-addresses = MYSQL_MASTER:MYSQL_PROXY_PORT

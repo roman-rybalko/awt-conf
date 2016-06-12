@@ -3,4 +3,3 @@
 
 mysql --user=`cat u` --password=`cat p` --batch -e 'stop slave'
 mysql --user=`cat u` --password=`cat p` --batch -e 'reset slave'
-/root/awt-db-backup.sh

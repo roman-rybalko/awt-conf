@@ -2,4 +2,4 @@
 . ./framework.sh
 export MYSQL_USER=awt-repl-adm
 export MYSQL_PASSWORD=ubEBbVnoy0cCOiW876hNgd
-deploy_batch 231_awt_cron_del 236_awt_cron 270_www_repl_del 180_mysql_slave2master 196_awt_db_backup_run
+deploy_batch 180_mysql_slave2master

@@ -13,6 +13,16 @@ case $H in
 		rm -vf *1.cnf *1.sql
 	;;
 	*)
-		exit 1
+		case "$MYSQL_MASTER" in
+			s1.*|s1)
+				rm -vf *1.cnf *1.sql
+			;;
+			s2.*|s2)
+			;;
+				rm -vf *2.cnf *2.sql
+			*)
+				exit 1
+			;;
+		esac
 	;;
 esac
