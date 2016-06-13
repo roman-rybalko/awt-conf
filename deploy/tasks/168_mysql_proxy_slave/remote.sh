@@ -10,6 +10,10 @@ chmod -v 0400 mysql-proxy.cnf
 chown root:root -v mysql-proxy.cnf
 mv -vf mysql-proxy.cnf /etc/mysql/
 
+echo "rm -f /var/run/mysqld/mysqld.sock" >> /etc/default/mysql-proxy
+echo "mkdir -p /var/run/mysqld" >> /etc/default/mysql-proxy
+cat /etc/default/mysql-proxy
+
 service mysql-proxy start
 service mysql-proxy stop
 service mysql-proxy start
